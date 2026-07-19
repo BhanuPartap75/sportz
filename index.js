@@ -1,5 +1,5 @@
 import express from 'express';
-import { matchRouter } from './src/routes/matches';
+import { matchRouter } from './src/routes/matches.js';
 const app=express();
 
 const port=8000;
@@ -9,6 +9,6 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/matches',matchRouter);
-app.listen('port',()=>{
-  console.log('server is running');
+app.listen(port,()=>{
+  console.log(`server is running on ${port}`);
 })
